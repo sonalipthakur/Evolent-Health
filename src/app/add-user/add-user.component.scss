@@ -1,0 +1,29 @@
+h2{
+    text-align: center;
+}
+input.invalid-input.ng-dirty.ng-invalid,
+select.invalid-input.ng-dirty.ng-invalid,
+invalid-form {
+    outline-color: transparent;
+    border: 2px solid red;
+}
+:host {
+    ::ng-deep {
+        .tooltip-inner {
+            color: white;
+            background-color: red;
+        }
+
+        .arrow::before {
+            border-bottom-color: red;
+        }
+
+        option {
+            font-weight: 500;
+        }   
+    }
+}
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid grey;
+}

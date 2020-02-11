@@ -1,0 +1,26 @@
+<div class="table-responsive">
+  <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+    <thead>
+      <tr>
+        <th scope="col">Student name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile number</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of user ">
+        <td>{{user.firstName}} {{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.mobileNumber}}</td>
+        <td class="text-center action-block">
+          <i class="fa fa-edit" routerLink="/edit-user/{{user.$key}}"></i>
+        </td>
+        <td class="text-center action-block">
+          <i class="fa fa-trash-o" (click)="deleteUser(user)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
